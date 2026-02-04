@@ -1,0 +1,186 @@
+var                                                       let                                              const
+
+-----------------------------------------------------------------------------------------------------------------------
+
+1.redecleration is possible                         redeclaration is not possible                   not possible
+
+2.reinitialization is possible                      Reinitialization is possible                    not possible
+
+3.while declaring initialization is not             while declaring initialization is not           not compulsory
+  compulsory                                        compulsory
+
+4. Var will not follow block                        Follows all the 3 scope                        follows all the 3 
+                                                                                                   scope
+
+-------------------------------------------------------------------------------------------------------------------
+
+scope
+------
+
+i)Global scope
+eg;
+var a=10;
+console.log("this is global scope");
+
+ii)Block scope
+eg;
+{
+    let b=50;
+    console.log("this area is block scope");
+    
+}
+
+iii)Local scope or Function scope
+eg;
+function abc(){
+    letc=40;
+    console.log("this area is local scope");
+    
+}
+abc()
+
+
+< --! data types--->
+  
+  it is used to define which kind  or what type of data is stored in the variable
+
+                            Data Type
+                               |
+       ______________________________________________
+     |                                               |
+  primitive                                       non premitive
+     |                                               |
+  number                                          Array
+  boolean                                         Object
+  string                                          function
+  undefined
+  null
+  Bigint
+
+  <!number-->
+
+              in number datatype we can store decimal as well as non decimal number.
+  <---note---->
+            typeof operator is used to know the data of any variable.
+
+            eg;
+               let a=10;
+               let b=20;
+               console.log(typeof a)//number
+               console.log(typeof a)// number
+
+<--parseInt-->
+    This method is used to convert anything into Integer value
+
+eg;
+let num4=Number.parseInt(43.2);
+console.log(num4);//output=43
+console.log(typeof num4);
+
+
+let num5=Number.parseInt("40");
+console.log(num5);//output=40
+console.log(typeof num5);
+
+let num6=Number.parseInt("ab50abc");
+console.log(num6)//output=NaN
+console.log(typeof num6);
+
+let a="20ab"
+console.log(a);//output=20
+let b="ab20"
+console.log(b);//output=NaN
+
+<---- boolean---->
+        
+         it can take true or false
+     
+         eg;
+            let isodd= true;
+            
+            console.log(isodd);//output=true;
+            console.log(typeof isodd); //output=boolean
+
+<----String----->
+           String is a combination of single or multiple character.
+
+           In javascript we can enclose the string by "",''.``.
+
+eg;
+           let str1="good morning everyone"
+           console.log(str1);
+           console.log(typeof str1);
+
+           let str2='good evening everyone'// here single quote is also consider as string not a character;
+           console.log(str2);
+           console.log(typeof str2);
+
+           let str3=`good night everyone`//it is also consider as a string
+           console.log(str3);
+           console.log(typeof str3);    
+<---undefined----->
+            Variable is declared but not initialized .
+
+            tyoeof od undefined is undefined.
+eg;
+            let salary;
+            console.log(salary);//Output=undefined
+            console.log(typeof salary); //Output=undefined       
+
+<-----Null--->
+            Null is used to store as nothing in variable.
+
+            it behaves as value what we have storing in the variable.
+
+            type of null is object.
+
+     eg;
+            let salar=null;
+            console.log(salary);  // null
+            console.log(typeof salary) // object
+<---Bigint--->
+            it is used to store big integer value in any variable.
+
+            bigintsuffix will be n.
+
+      eg;
+            int largenumber=2n;
+            console.log(largenumber);  //2n
+            console.log(typeof largenumber)   //Bigint  
+
+<-----hoisting--->
+            Moving the decleration top of the respective scope is known as hoisting.
+
+                     There are two types they are
+                          *Variable hoisting
+                          *functional hoisting
+1.variable hoisting
+  1.by using var keyword
+                Decleration goes to the top of the scope and value initialised as undefined till actual initialization.thats why if we try to access before actual initialization will be get undefined.
+  2.by using  let and const keyword
+                Decleration is go to the top of the scope and value will not be assigned till actual initialization.if we are try to access before actual initialization we will get reference error due to TD7.
+                    (or)
+            
+<---- variable hoisting--->
+            if we have declared any variable by using var keyword and we are trying to access that before its decleration, output will be undefined.   
+
+            Because that decleration part will moving to the top.this is called variable hoisting.
+eg;
+            console.log(a)  // undefined because the decleration part will be moving to the top and give the output as undefined.
+
+            var a=20; 
+            -----  this move to top
+<----- what is the difference between == and ===?--->
+
+==  will check only the values
+=== it will check value with datatype
+
+console.log("20" =="20")  //true
+console.log("20" === "20") //false
+
+2.Functional hoisting
+       Entire function goes to top of the scope thats why we can call the function before decleration.still it will work.
+                 
+            
+            
+
